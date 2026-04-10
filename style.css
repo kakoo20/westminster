@@ -212,32 +212,29 @@ nav.scrolled {
     color: var(--gold);
 }
 
-.hero h1 {
-    font-size: clamp(2rem, 8vw, 5rem); /* Naturally shrinks on smaller screens */
-    letter-spacing: clamp(5px, 2vw, 15px);
-    width: 100%;
-    padding: 0 15px;
-    margin-bottom: 20px;
-    color: var(--gold-light);
-    text-transform: uppercase;
-}
+/* Force the title to fit within the screen boundaries */
+    .hero h1 {
+        font-size: 1.8rem !important; /* Lowered from 2.2rem */
+        letter-spacing: 2px !important; /* Lowered from 5px - this is likely the main culprit */
+        line-height: 1.1;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        white-space: normal; /* Allows text to wrap to a second line if needed */
+    }
 
-.hero-subtitle {
-    font-size: clamp(0.9rem, 3vw, 1.3rem);
-    letter-spacing:clamp(3px, 1.5vw, 8px);
-    color: var(--gray);
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
+    .hero-subtitle {
+        letter-spacing: 2px !important; /* Lowered from 3px */
+        font-size: 0.9rem !important; /* Lowered from 1rem */
+        width: 100%;
+    }
 
-.hero-description {
-    max-width: 600px;
-    margin: 0 auto 50px;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--gray);
-    font-weight: 300;
-}
+    .hero-description {
+        font-size: 0.9rem !important;
+        padding: 0 10px !important;
+        max-width: 100% !important;
+        line-height: 1.5 !important;
+    }
 
 .cta-buttons {
     display: flex;
