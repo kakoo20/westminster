@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westminster | Expérience Gastronomique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">✦</div>
+            <div class="loader-text">WESTMINSTER</div>
+        </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+        <div class="close-menu" onclick="toggleMobileMenu()">✕</div>
+        <a href="#home" onclick="toggleMobileMenu()">Accueil</a>
+        <a href="#about" onclick="toggleMobileMenu()">À Propos</a>
+        <a href="#menu" onclick="toggleMobileMenu()">Menu</a>
+        <a href="#reviews" onclick="toggleMobileMenu()">Avis</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+    </div>
+
+    <nav id="navbar">
+        <div class="logo">
+        <img src="westminster_logo.png" alt="Westminster Logo" class="nav-logo-img">
+        Westminster
+    </div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À Propos</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reviews">Avis</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <video autoplay muted loop playsinline class="hero-video">
+        <source src="vd_LP1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+        <div class="hero-content">
+            <div class="hero-logo-container">
+            <img src="westminster_logo.png" alt="Westminster Logo" class="hero-logo-img">
+        </div>
+            <h1>Westminster</h1>
+            <p class="hero-subtitle">Gastronomie & Excellence Culinaire</p>
+            <p class="hero-description">
+                Vivez un voyage culinaire extraordinaire où l'élégance traditionnelle rencontre l'innovation moderne. 
+                Chaque plat raconte une histoire de passion, de précision et des meilleurs ingrédients.
+            </p>
+            <div class="cta-buttons">
+                <a href="#menu" class="btn btn-primary">Voir le Menu</a>
+                <a href="#contact" class="btn">Réserver une Table</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="section-header">
+            <span class="section-tag">Notre Histoire</span>
+            <h2 class="section-title">L'Expérience Westminster</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Un Héritage d'Excellence Culinaire</h3>
+                <p>
+                    Fondé en 2010, Westminster s'est imposé comme un phare de la haute cuisine, 
+                    où chaque repas est préparé à la perfection. Nos chefs exécutifs apportent des décennies 
+                    d'expérience issues de cuisines étoilées au guide Michelin à travers l'Europe.
+                </p>
+                <p>
+                    Nous croyons en la philosophie "de la ferme à la table", en nous approvisionnant uniquement 
+                    en produits frais de saison auprès d'artisans locaux et de fermes durables. Notre menu évolue 
+                    au fil des saisons, garantissant que chaque visite offre une aventure gastronomique unique.
+                </p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">14</span>
+                        <span class="stat-label">Années</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Étoiles Michelin</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50k+</span>
+                        <span class="stat-label">Clients</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image-frame">
+                    <div class="image-placeholder">
+                        [Image de l'Intérieur du Restaurant]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <div class="section-header">
+            <span class="section-tag">Délices Culinaires</span>
+            <h2 class="section-title">Notre Menu</h2>
+        </div>
+        
+        <div class="menu-tabs">
+            <button class="menu-tab active" onclick="switchTab('starters')">Entrées</button>
+            <button class="menu-tab" onclick="switchTab('mains')">Plats Principaux</button>
+            <button class="menu-tab" onclick="switchTab('desserts')">Desserts</button>
+            <button class="menu-tab" onclick="switchTab('drinks')">Boissons</button>
+        </div>
+
+        <div class="menu-grid active" id="starters">
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Arancini à la Truffe</h4>
+                    <p>Boulettes de risotto à la truffe noire, mousse de parmesan, micro-herbes</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">24€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Tartare de Thon</h4>
+                    <p>Thon albacore, mousse d'avocat, croustillant de sésame, aïoli au wasabi</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">28€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Terrine de Foie Gras</h4>
+                    <p>Compote de figues, pain brioché, réduction de balsamique vieilli</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">32€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Salade de Burrata</h4>
+                    <p>Tomates anciennes, huile de basilic, pignons de pin grillés, parmesan affiné</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">22€</span>
+            </div>
+        </div>
+
+        <div class="menu-grid" id="mains">
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Filet de Bœuf Wagyu</h4>
+                    <p>Grade A5, écrasé de pommes de terre à la truffe, légumes de saison, jus au vin rouge</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">85€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Noix de Saint-Jacques Poêlées</h4>
+                    <p>Purée de chou-fleur, pancetta croustillante, sauce au beurre citronné</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">58€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Carré d'Agneau en Croûte d'Herbes</h4>
+                    <p>Ratatouille, pommes de terre fondantes, jus au romarin</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">68€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Homard Thermidor</h4>
+                    <p>Homard gratiné, crème au cognac, fromage gruyère</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">75€</span>
+            </div>
+        </div>
+
+        <div class="menu-grid" id="desserts">
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Fondant au Chocolat</h4>
+                    <p>Chocolat noir Valrhona, glace à la gousse de vanille</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">18€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Crème Brûlée</h4>
+                    <p>Vanille de Madagascar, sucre caramélisé, baies fraîches</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">16€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Tiramisu</h4>
+                    <p>Biscuits imbibés d'espresso, mascarpone, cacao en poudre</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">17€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Sélection de Fromages</h4>
+                    <p>Fromages artisanaux, rayon de miel, confiture de figues, pain aux noix</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">28€</span>
+            </div>
+        </div>
+
+        <div class="menu-grid" id="drinks">
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Cocktail Signature Westminster</h4>
+                    <p>Champagne, sureau, feuilles d'or, baies fraîches</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">22€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Old Fashioned</h4>
+                    <p>Whisky pur malt, bitters aromatiques, zeste d'orange</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">18€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Accord Mets et Vins</h4>
+                    <p>Sélection de 5 vins premium assortis à votre repas</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">65€</span>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-info">
+                    <h4>Champagne Millésimé</h4>
+                    <p>Dom Pérignon 2012, servi dans des flûtes en cristal</p>
+                </div>
+                <span class="dots"></span>
+                <span class="menu-item-price">45€</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <div class="section-header">
+            <span class="section-tag">Témoignages</span>
+            <h2 class="section-title">Expériences de nos Clients</h2>
+        </div>
+        
+        <div class="reviews-slider">
+            <div class="review-card active" data-index="0">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">
+                    "Une expérience gastronomique absolument transcendante. L'attention portée aux détails dans chaque plat 
+                    est remarquable. Le bœuf Wagyu fondait dans ma bouche et le service était impeccable. 
+                    Westminster a établi un nouveau standard pour la cuisine raffinée."
+                </p>
+                <div class="reviewer-name">Alexander Mitchell</div>
+                <div class="reviewer-platform">Avis Google</div>
+            </div>
+            
+            <div class="review-card" data-index="1">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">
+                    "Nous avons fêté notre anniversaire ici et c'était magique. L'ambiance est sophistiquée 
+                    mais chaleureuse, et le menu dégustation était un voyage de saveurs. L'accord mets et vins était 
+                    parfaitement orchestré. Nous prévoyons déjà notre prochaine visite !"
+                </p>
+                <div class="reviewer-name">Sarah & James Chen</div>
+                <div class="reviewer-platform">Avis Google</div>
+            </div>
+            
+            <div class="review-card" data-index="2">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">
+                    "En tant que critique culinaire, je suis rarement surpris, mais Westminster a dépassé toutes mes attentes. 
+                    La créativité du chef brille tout en respectant les techniques classiques. L'arancini à la truffe 
+                    est tout simplement divin. Un incontournable pour tout amateur de cuisine."
+                </p>
+                <div class="reviewer-name">Marcus Thompson</div>
+                <div class="reviewer-platform">Avis Google</div>
+            </div>
+            
+            <div class="review-card" data-index="3">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">
+                    "Dès l'instant où nous sommes entrés, nous nous sommes sentis comme de la royauté. Le personnel a anticipé 
+                    chacun de nos besoins sans être intrusif. Le fondant au chocolat était la fin parfaite 
+                    d'une soirée parfaite. Simplement exceptionnel à tous points de vue."
+                </p>
+                <div class="reviewer-name">Elena Rodriguez</div>
+                <div class="reviewer-platform">Avis Google</div>
+            </div>
+        </div>
+        
+        <div class="review-nav">
+            <button class="review-btn" onclick="changeReview(-1)">←</button>
+            <button class="review-btn" onclick="changeReview(1)">→</button>
+        </div>
+        
+        <div class="review-dots">
+            <div class="review-dot active" onclick="goToReview(0)"></div>
+            <div class="review-dot" onclick="goToReview(1)"></div>
+            <div class="review-dot" onclick="goToReview(2)"></div>
+            <div class="review-dot" onclick="goToReview(3)"></div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span class="section-tag">Réservations</span>
+            <h2 class="section-title">Contactez-Nous</h2>
+        </div>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Visitez Westminster</h3>
+
+                   <div class="social-links">
+    <a href="https://www.instagram.com/westminster_06?igsh=MWxmbnBjcnBrY3J0Zg==" class="social-link" aria-label="Instagram" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/yourprofile" class="social-link" aria-label="Facebook" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a href="https://www.tiktok.com/@westminster_bejaia?_r=1&_t=ZS-95PJyKd2e4S" class="social-link" aria-label="TikTok" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
+</div>
+                
+                <div class="contact-detail">
+                    <h4>Adresse</h4>
+                    <p>123 Royal Avenue, Suite 100<br>Metropolis, NY 10001</p>
+                </div>
+                
+                <div class="contact-detail">
+                    <h4>Horaires</h4>
+                    <p>Mardi - Dimanche : 17h00 - 23h00<br>Lundi : Fermé</p>
+                </div>
+                
+                <div class="contact-detail">
+                    <h4>Réservations</h4>
+                    <p>+1 (212) 555-0147<br>reservations@westminster.com</p>
+                </div>
+                
+                <div class="contact-detail">
+                    <h4>Événements Privés</h4>
+                    <p>events@westminster.com<br>+1 (212) 555-0148</p>
+                </div>
+            </div>
+            
+            <div class="map-container">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24140.216933595697!2d5.020248626405432!3d36.747584483099125!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128d33bfa7ef108b%3A0x2812c1da2a2e49f3!2sWestminster!5e0!3m2!1sfr!2sdz!4v1775777574716!5m2!1sfr!2sdz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">✦ WESTMINSTER ✦</div>
+       
+        <p class="footer-text">
+            © 2024 Restaurant Westminster. Tous droits réservés.<br>
+            <span>Conçu avec passion pour l'excellence culinaire</span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
