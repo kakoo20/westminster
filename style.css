@@ -14,16 +14,17 @@
     --gray: #888888;
 }
 
-html {
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Stops the horizontal scroll/black gap */
+    position: relative;
+    box-sizing: border-box; /* Crucial: stops padding from pushing width out */
     scroll-behavior: smooth;
-}
-
-body {
     font-family: 'Lato', sans-serif;
     background-color: var(--black);
     color: var(--white);
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -212,17 +213,18 @@ nav.scrolled {
 }
 
 .hero h1 {
-    font-size: 5rem;
-    font-weight: 400;
-    letter-spacing: 15px;
+    font-size: clamp(2rem, 8vw, 5rem); /* Naturally shrinks on smaller screens */
+    letter-spacing: clamp(5px, 2vw, 15px);
+    width: 100%;
+    padding: 0 15px;
     margin-bottom: 20px;
     color: var(--gold-light);
     text-transform: uppercase;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
-    letter-spacing: 8px;
+    font-size: clamp(0.9rem, 3vw, 1.3rem);
+    letter-spacing:clamp(3px, 1.5vw, 8px);
     color: var(--gray);
     margin-bottom: 40px;
     text-transform: uppercase;
