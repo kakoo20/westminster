@@ -1112,16 +1112,11 @@ footer {
     /* Use calc to stay inside the 10px padding and double border */
     width: calc(100% - 20px);
     height: calc(100% - 20px);
-    filter: grayscale(1) invert(92%) contrast(85%);
     opacity: 0.9;
     border: none;
     display: block;
 }
 
-.map-container:hover iframe {
-    opacity: 1;
-    filter: grayscale(0.5) invert(92%);
-}
 
 .hero {
     position: relative; /* Needed to anchor the video */
@@ -1157,4 +1152,64 @@ footer {
 .hero-content {
     position: relative;
     z-index: 1; /* Ensures text stays on top of the overlay */
+}
+
+/* Layout for the two main columns */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 60px;
+    align-items: start;
+}
+
+/* The right-side column containing map + button */
+.map-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between the map and the button */
+    width: 100%;
+}
+
+/* The button styling */
+.map-btn {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: all 0.4s ease;
+    background: transparent;
+}
+
+.map-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr; /* Stacks vertically on mobile */
+    }
+}
+
+.about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the photo fills the frame without stretching */
+    display: block;
+}
+
+/* Ensure the frame handles the image correctly */
+.image-frame {
+    position: relative;
+    border: 1.5px solid var(--gold);
+    padding: 15px;
+    box-shadow: inset 0 0 0 1.5px var(--gold);
+    background: #0A0A0A;
 }
