@@ -17,7 +17,11 @@ window.addEventListener('scroll', () => {
 
 // Mobile Menu Toggle
 function toggleMobileMenu() {
-    document.getElementById('mobileNav').classList.toggle('active');
+    const mobileNav = document.getElementById('mobileNav');
+    const hamburger = document.querySelector('.mobile-menu');
+    
+    mobileNav.classList.toggle('active');
+    hamburger.classList.toggle('active');
 }
 
 // Intersection Observer for Scroll Animations
