@@ -214,7 +214,7 @@ nav.scrolled {
 
 /* Force the title to fit within the screen boundaries */
     .hero h1 {
-        font-size: 1.8rem !important; /* Lowered from 2.2rem */
+        font-size: 2rem !important; /* Lowered from 2.2rem */
         letter-spacing: 2px !important; /* Lowered from 5px - this is likely the main culprit */
         line-height: 1.1;
         width: 100%;
@@ -225,12 +225,12 @@ nav.scrolled {
 
     .hero-subtitle {
         letter-spacing: 2px !important; /* Lowered from 3px */
-        font-size: 0.9rem !important; /* Lowered from 1rem */
+        font-size: 1rem !important; /* Lowered from 1rem */
         width: 100%;
     }
 
     .hero-description {
-        font-size: 0.9rem !important;
+        font-size: 1rem !important;
         padding: 0 10px !important;
         max-width: 100% !important;
         line-height: 1.5 !important;
